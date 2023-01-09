@@ -1,4 +1,36 @@
 .contact {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 15px;
   font-weight: 400;
-  font-size: x-large;
+  font-size: large;
+}
+
+.contact:before {
+  display: flex;
+  content: '';
+  width: 7px;
+  height: 7px;
+  background-color: black;
+  border-radius: 50%;
+}
+
+.button {
+  text-transform: initial;
+  background-color: #fff;
+  border: solid 1px #333;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: x-small;
+  padding: 3px 9px;
+  transition: background-color ease 150ms;
+}
+
+.button:hover {
+  background-color: rgba(236, 30, 30, 0.5);
+}
+
+.button:active {
+  background-color: rgb(236, 30, 30);
 }
