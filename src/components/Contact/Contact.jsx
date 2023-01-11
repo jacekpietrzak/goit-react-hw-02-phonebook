@@ -1,12 +1,10 @@
 import css from './Contact.module.css';
-import ContactName from '../ContactName/ContactName';
-import ContactNumber from '../ContactNumber/ContactNumber';
+import PropTypes from 'prop-types';
 
 const Contact = ({ contact, removeContact }) => {
   return (
     <li className={css.contact}>
-      <ContactName name={contact.name} />
-      <ContactNumber number={contact.number} />
+      {contact.name}: {contact.number}
       <button
         className={css.button}
         type="button"
@@ -17,6 +15,11 @@ const Contact = ({ contact, removeContact }) => {
       </button>
     </li>
   );
+};
+
+Contact.propTypes = {
+  contact: PropTypes.object.isRequired,
+  removeContact: PropTypes.func.isRequired,
 };
 
 export default Contact;

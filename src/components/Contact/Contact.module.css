@@ -24,13 +24,18 @@
   cursor: pointer;
   font-size: x-small;
   padding: 3px 9px;
-  transition: background-color ease 150ms;
+  transition: background-color ease 150ms, border-color ease 150ms,
+    color ease 150ms;
 }
 
 .button:hover {
+  color: rgb(120, 30, 30);
+  border-color: rgba(236, 30, 30, 0.5);
   background-color: rgba(236, 30, 30, 0.5);
 }
 
 .button:active {
-  background-color: rgb(236, 30, 30);
+  color: rgb(120, 30, 30);
+  border-color: rgba(236, 30, 30, 0.75);
+  background-color: rgba(236, 30, 30, 0.75);
 }

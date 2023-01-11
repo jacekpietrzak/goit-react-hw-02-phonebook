@@ -1,8 +1,9 @@
 import { Component } from 'react';
 import css from './ContactForm.module.css';
+import PropTypes from 'prop-types';
 import { nanoid } from 'nanoid';
 
-class Form extends Component {
+class ContactForm extends Component {
   handleChange = event => {
     const { name, value } = event.target;
     this.setState({
@@ -57,4 +58,8 @@ class Form extends Component {
   }
 }
 
-export default Form;
+ContactForm.propTypes = {
+  addContact: PropTypes.func.isRequired,
+};
+
+export default ContactForm;

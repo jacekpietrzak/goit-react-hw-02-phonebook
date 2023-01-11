@@ -1,5 +1,6 @@
 import { Component } from 'react';
 import css from './Filter.module.css';
+import PropTypes from 'prop-types';
 
 class Filter extends Component {
   render() {
@@ -19,5 +20,9 @@ class Filter extends Component {
     );
   }
 }
+
+Filter.propTypes = {
+  handleFilter: PropTypes.func.isRequired,
+};
 
 export default Filter;

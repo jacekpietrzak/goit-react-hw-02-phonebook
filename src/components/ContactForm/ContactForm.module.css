@@ -31,13 +31,18 @@
   cursor: pointer;
   font-size: medium;
   padding: 5px 15px;
-  transition: background-color ease 150ms;
+  transition: background-color ease 150ms, border-color ease 150ms,
+    color ease 150ms;
 }
 
 .button:hover {
+  color: rgb(18, 72, 25);
+  border-color: rgba(112, 201, 68, 0.5);
   background-color: rgba(112, 201, 68, 0.5);
 }
 
 .button:active {
+  color: rgb(18, 72, 25);
+  border-color: rgb(112, 201, 68);
   background-color: rgb(112, 201, 68);
 }
