@@ -3,6 +3,8 @@ import Contact from '../Contact/Contact';
 import PropTypes from 'prop-types';
 
 const ContactList = ({ contacts, removeContact }) => {
+  console.log(contacts);
+
   return (
     <div>
       <ul className={css.list}>
@@ -21,7 +23,7 @@ const ContactList = ({ contacts, removeContact }) => {
 };
 
 ContactList.propTypes = {
-  contacts: PropTypes.array.isRequired,
+  contacts: PropTypes.arrayOf(PropTypes.object),
   removeContact: PropTypes.func.isRequired,
 };
 

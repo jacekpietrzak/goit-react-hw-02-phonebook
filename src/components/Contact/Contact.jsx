@@ -18,7 +18,11 @@ const Contact = ({ contact, removeContact }) => {
 };
 
 Contact.propTypes = {
-  contact: PropTypes.object.isRequired,
+  contact: PropTypes.shape({
+    id: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    number: PropTypes.string.isRequired,
+  }),
   removeContact: PropTypes.func.isRequired,
 };
 
